@@ -10,7 +10,8 @@ struct Book
 
 Book b[100];
 int numBooks , n=0;
-// إضافة كتاب
+
+// Add a book
 void addBook()
 {
 cout << "How many books? ";
@@ -39,7 +40,7 @@ for(int i = 0; i < numBooks; i++){
     }
 }
 
-// عرض الكتب
+// Book display
 void showBooks()
 {
     if(n == 0){
@@ -53,7 +54,7 @@ void showBooks()
         cout << "Author: " << b[i].author << endl; }
 }
 
-// البحث عن كتاب
+// Search for a book
 void searchBook()
 {
     int id;
@@ -70,7 +71,7 @@ void searchBook()
     cout << "Book Not Found\n";
 }
 
-// حذف كتاب
+// Delete book
 void deleteBook()
 {
     int id;
@@ -80,7 +81,7 @@ void deleteBook()
     for(int i = 0; i < n; i++){
         if(b[i].id == id){
             for(int j = i; j < n - 1; j++){
-                b[j] = b[j + 1];} // تحريك العناصر
+                b[j] = b[j + 1];} // Moving elements
 
 
             n--;
